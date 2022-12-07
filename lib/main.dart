@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'src/models/appdata.dart';
 import 'src/pages/home.dart';
+import 'src/pages/search.dart';
 import 'src/pages/preload.dart';
 import 'package:provider/provider.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => HomePage(),
         '/preload': (context) => PreloadPage(),
+        '/search': (context) => SearchPage(),
       },
       initialRoute: '/preload',
     );
