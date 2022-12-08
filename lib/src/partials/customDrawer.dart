@@ -44,7 +44,7 @@ Widget CustomDrawer({
         ListTile(
           leading: const Icon(Icons.public),
           title: const Text('Escolher Continente'),
-          onTap: () => goToRouter('/home'),
+          onTap: () => goToRouter('/continent'),
         ),
         ListTile(
           leading: const Icon(Icons.search),

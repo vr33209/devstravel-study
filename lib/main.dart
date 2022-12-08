@@ -3,6 +3,7 @@ import 'src/models/appdata.dart';
 import 'src/pages/home.dart';
 import 'src/pages/search.dart';
 import 'src/pages/preload.dart';
+import 'src/pages/continent.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => HomePage(),
         '/preload': (context) => PreloadPage(),
         '/search': (context) => SearchPage(),
+        '/continent': (context) => ContinentPage(),
       },
       initialRoute: '/preload',
     );
