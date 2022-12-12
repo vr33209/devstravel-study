@@ -4,6 +4,7 @@ import 'src/pages/home.dart';
 import 'src/pages/search.dart';
 import 'src/pages/preload.dart';
 import 'src/pages/continent.dart';
+import 'src/pages/listCity.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/preload': (context) => PreloadPage(),
         '/search': (context) => SearchPage(),
         '/continent': (context) => ContinentPage(),
+        '/listCity': (context) => ListCityPage(),
       },
       initialRoute: '/preload',
     );

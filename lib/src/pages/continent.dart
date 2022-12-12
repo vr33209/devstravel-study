@@ -10,6 +10,12 @@ class ContinentPage extends StatelessWidget {
 
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
 
+  void seeCityAction(pageContext, continentIndex) {
+    Navigator.pushNamed(pageContext, '/listCity', arguments: continentIndex);
+  }
+
+  void cityBoxAction(cityData) {}
+
   @override
   Widget build(BuildContext context) {
     return Consumer<AppData>(
@@ -37,25 +43,39 @@ class ContinentPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    TextButton(
-                      onPressed: () {},
+                    Container(
+                      margin: const EdgeInsets.only(left: 10),
                       child: Text(
-                          '${appdata.data[index]['name']} (${cities.length})'),
+                        '${appdata.data[index]['name']} (${cities.length})',
+                        style: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Helvetica Neue"),
+                      ),
                     ),
                     TextButton(
-                      onPressed: () {},
-                      child: const Text('Ver cidades'),
+                      onPressed: () {
+                        seeCityAction(context, index);
+                      },
+                      child: const Text(
+                        'Ver cidades',
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Helvetica Neue"),
+                      ),
                     ),
                   ],
                 ),
                 Container(
-                  height: 130,
+                  height: 150,
                   margin: const EdgeInsets.only(bottom: 10),
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: cities.length,
                     itemBuilder: (cityContext, index) {
-                      return CityBox(data: cities[index], onTap: () {});
+                      return CityBox(data: cities[index], onTap: cityBoxAction);
                     },
                   ),
                 ),

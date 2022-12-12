@@ -21,6 +21,7 @@ PreferredSizeWidget CustomAppbar({
 
   return AppBar(
     backgroundColor: Colors.white,
+    brightness: Brightness.light,
     elevation: 0,
     centerTitle: false,
     title: Text(
