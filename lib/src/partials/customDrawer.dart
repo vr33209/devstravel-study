@@ -54,7 +54,7 @@ Widget CustomDrawer({
         ListTile(
           leading: const Icon(Icons.favorite),
           title: const Text('Cidades salvas'),
-          onTap: () => goToRouter('/home'),
+          onTap: () => goToRouter('/favorites'),
         ),
       ],
     ),

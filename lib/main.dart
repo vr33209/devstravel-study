@@ -5,6 +5,7 @@ import 'src/pages/search.dart';
 import 'src/pages/preload.dart';
 import 'src/pages/continent.dart';
 import 'src/pages/listCity.dart';
+import 'src/pages/favorites.dart';
 import 'src/pages/city.dart';
 import 'package:provider/provider.dart';
 
@@ -25,11 +26,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         '/home': (context) => HomePage(),
-        '/preload': (context) => PreloadPage(),
-        '/search': (context) => SearchPage(),
+        '/preload': (context) => const PreloadPage(),
+        '/search': (context) => const SearchPage(),
         '/continent': (context) => ContinentPage(),
         '/listCity': (context) => ListCityPage(),
-        '/city': (context) => CityPage(),
+        '/city': (context) => const CityPage(),
+        '/favorites': (context) => FavoritesPage(),
       },
       initialRoute: '/preload',
     );

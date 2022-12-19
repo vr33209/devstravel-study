@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../partials/customAppbar.dart';
 import 'package:devstravel/src/partials/cityBox.dart';
-import 'package:devstravel/src/partials/cityBox.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({Key? key}) : super(key: key);

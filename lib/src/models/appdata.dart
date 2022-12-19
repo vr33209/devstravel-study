@@ -33,10 +33,22 @@ class AppData with ChangeNotifier {
       for (var country in continents['countries']) {
         for (var city in country['cities']) {
           if (city['name'].toLowerCase().contains(textSearch)) {
-            print('teste');
             result.add(city);
           }
         }
+      }
+    }
+
+    return result;
+  }
+
+  List favoritesCities() {
+    List result = [];
+
+    for (var favorite in favorites) {
+      List foundCities = searchCity(favorite);
+      if (foundCities.isNotEmpty) {
+        result.add(foundCities[0]);
       }
     }
 
