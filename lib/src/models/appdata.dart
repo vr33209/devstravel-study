@@ -21,6 +21,28 @@ class AppData with ChangeNotifier {
     }
   }
 
+  List searchCity(textSearch) {
+    List result = [];
+    textSearch = textSearch.trim().toLowerCase();
+
+    if (textSearch == '') {
+      return result;
+    }
+
+    for (var continents in data) {
+      for (var country in continents['countries']) {
+        for (var city in country['cities']) {
+          if (city['name'].toLowerCase().contains(textSearch)) {
+            print('teste');
+            result.add(city);
+          }
+        }
+      }
+    }
+
+    return result;
+  }
+
   void setData(newData) {
     data = newData;
     notifyListeners();
