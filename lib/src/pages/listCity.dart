@@ -11,7 +11,9 @@ class ListCityPage extends StatelessWidget {
   TextStyle styles = const TextStyle(
       fontSize: 15, fontWeight: FontWeight.bold, fontFamily: 'Helvetica Neue');
 
-  void cityBoxAction(cityData) {}
+  void cityBoxAction(pageContext, cityData) {
+    Navigator.pushNamed(pageContext, '/city', arguments: cityData);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +46,7 @@ class ListCityPage extends StatelessWidget {
               return CityBox(
                 data: cities[index],
                 onTap: (cityData) {
-                  cityBoxAction(cityData);
+                  cityBoxAction(context, cityData);
                 },
               );
             },

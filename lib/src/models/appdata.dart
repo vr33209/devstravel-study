@@ -4,6 +4,22 @@ import 'package:http/http.dart' as http;
 
 class AppData with ChangeNotifier {
   var data = [];
+  var favorites = [];
+
+  bool hasFavorite(cityName) {
+    return favorites.contains(cityName);
+  }
+
+  bool toggleOnHeart(cityName) {
+    var hasFavorite = this.hasFavorite(cityName);
+    if (hasFavorite) {
+      favorites.remove(cityName);
+      return false;
+    } else {
+      favorites.add(cityName);
+      return true;
+    }
+  }
 
   void setData(newData) {
     data = newData;
