@@ -2,6 +2,7 @@ import 'package:devstravel/src/models/appdata.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../partials/customDrawer.dart';
+import '../partials/customBottomBar.dart';
 
 class CityPage extends StatefulWidget {
   const CityPage({Key? key}) : super(key: key);

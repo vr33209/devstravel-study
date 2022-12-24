@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../partials/customAppbar.dart';
 import 'package:devstravel/src/partials/cityBox.dart';
+import '../partials/customBottomBar.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({Key? key}) : super(key: key);
@@ -52,6 +53,8 @@ class _SearchPage extends State<SearchPage> {
             scaffoldKey: _scaffoldKey,
             pageContext: context,
           ),
+          bottomNavigationBar:
+              CustomBottomNavigationBar(pageContext: context, selectedIndex: 2),
           body: Column(
             children: [
               Container(

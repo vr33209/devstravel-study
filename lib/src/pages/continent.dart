@@ -4,6 +4,7 @@ import 'package:devstravel/src/partials/cityBox.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../partials/customAppbar.dart';
+import '../partials/customBottomBar.dart';
 
 class ContinentPage extends StatelessWidget {
   ContinentPage({Key? key}) : super(key: key);
@@ -33,6 +34,8 @@ class ContinentPage extends StatelessWidget {
           pageContext: context,
         ),
         backgroundColor: Colors.white,
+        bottomNavigationBar:
+            CustomBottomNavigationBar(pageContext: context, selectedIndex: 1),
         body: ListView.builder(
           itemCount: appdata.data.length,
           itemBuilder: (context, index) {

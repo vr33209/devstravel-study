@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../partials/customAppbar.dart';
 import '../partials/customDrawer.dart';
 import 'package:devstravel/src/partials/cityBox.dart';
+import '../partials/customBottomBar.dart';
 
 class FavoritesPage extends StatelessWidget {
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
@@ -27,6 +28,7 @@ class FavoritesPage extends StatelessWidget {
           scaffoldKey: _scaffoldKey,
           pageContext: context,
         ),
+        // bottomNavigationBar: const CustomBottomNavigationBar(),
         body: Center(
           child: GridView.count(
             crossAxisCount: 2,

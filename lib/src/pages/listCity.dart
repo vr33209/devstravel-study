@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../partials/customAppbar.dart';
 import '../partials/cityBox.dart';
 import '../partials/customDrawer.dart';
+import '../partials/customBottomBar.dart';
 
 class ListCityPage extends StatelessWidget {
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();

@@ -43,7 +43,10 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          bottomNavigationBar: const CustomBottomNavigationBar()),
+          bottomNavigationBar: CustomBottomNavigationBar(
+            pageContext: context,
+            selectedIndex: 0,
+          )),
     );
   }
 }
