@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'src/models/appdata.dart';
 import 'src/pages/home.dart';
+import 'src/pages/login.dart';
 import 'src/pages/search.dart';
 import 'src/pages/preload.dart';
 import 'src/pages/continent.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
+        '/login': (context) => const LoginPage(),
         '/home': (context) => HomePage(),
         '/preload': (context) => const PreloadPage(),
         '/search': (context) => const SearchPage(),
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
         '/city': (context) => const CityPage(),
         '/favorites': (context) => FavoritesPage(),
       },
-      initialRoute: '/preload',
+      initialRoute: '/login',
     );
   }
 }

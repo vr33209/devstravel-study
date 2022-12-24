@@ -35,7 +35,9 @@ class _SearchPage extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Consumer<AppData>(builder: (ctx, appdata, child) {
       var cities = [];
-      for (var country in appdata.data[0]['countries']) {
+      final countries =
+          appdata.data.length > 1 ? appdata.data[0]['countries'] : [];
+      for (var country in countries) {
         cities.addAll(country['cities']);
       }
       return Scaffold(
