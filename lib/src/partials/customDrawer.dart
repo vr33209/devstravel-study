@@ -56,6 +56,11 @@ Widget CustomDrawer({
           title: const Text('Cidades salvas'),
           onTap: () => goToRouter('/favorites'),
         ),
+        ListTile(
+          leading: const Icon(Icons.outbox),
+          title: const Text('Logout'),
+          onTap: () => goToRouter('/login'),
+        ),
       ],
     ),
   );
