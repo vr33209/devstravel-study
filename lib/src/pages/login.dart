@@ -113,11 +113,7 @@ class _LoginPage extends State<LoginPage> {
                                       bottom: 20,
                                     ),
                                     child: TextFormField(
-                                      onSaved: (value) {
-                                        setState(() {
-                                          password = value ?? '';
-                                        });
-                                      },
+                                      obscureText: true,
                                       decoration: const InputDecoration(
                                         border: InputBorder.none,
                                         prefixIcon: Icon(
@@ -126,6 +122,11 @@ class _LoginPage extends State<LoginPage> {
                                         ),
                                         hintText: 'Senha',
                                       ),
+                                      onSaved: (value) {
+                                        setState(() {
+                                          password = value ?? '';
+                                        });
+                                      },
                                       validator: (value) {
                                         if (value == null || value.isEmpty) {
                                           return 'Campo obrigátorio';
